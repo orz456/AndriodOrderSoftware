@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/MainFragment"
+        android:icon="@drawable/frame_3"
+        android:title="Helper"/>
+
+    <item
+        android:id="@+id/publish"
+        android:icon="@drawable/publish"
+        android:title="Publish"/>
+
+    <item
+        android:id="@+id/order"
+        android:icon="@drawable/order"
+        android:title="Order"/>
+
+    <item
+        android:id="@+id/yours"
+        android:icon="@drawable/my"
+        android:title="Yours"/>
+</menu>

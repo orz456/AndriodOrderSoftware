@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="60dp"
+    android:background="#F5F5F5"
+
+    tools:context="com.example.fragment.OrderFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:text="Order"
+            android:textColor="@color/text_main"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_renew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/renew"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginStart="350dp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/rel"
+        app:layout_constraintBottom_toTopOf="@+id/ll"
+        android:background="#000000" />
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/ll"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/v1"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/rec_all"
+            android:text="All Order"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/rec_unf"
+            android:text="Unfinished"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/rec_fin"
+            android:text="Finished"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/rec_con"
+            android:text="Confirmed"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_marginTop="97dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

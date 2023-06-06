@@ -1,0 +1,151 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="60dp"
+    android:background="#F5F5F5"
+
+    tools:context="com.example.fragment.MyFragment">
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:text="My"
+            android:textColor="@color/text_main"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_renew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/renew"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginStart="350dp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/rela"
+        android:background="#f5f5f5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cst"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bk5"
+
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/v1">
+        <TextView
+            android:id="@+id/tv_id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="UserID:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/userID"
+            app:layout_constraintTop_toTopOf="@id/tv_id"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Username"
+            android:textSize="14dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/cst"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/pub_all"
+            android:text="All Order"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/pub2"
+            android:text="Token"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/pub3"
+            android:text="Finished"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/pub4"
+            android:text="Confirmed"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec1"
+        android:layout_marginTop="187dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
